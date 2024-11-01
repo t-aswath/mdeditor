@@ -26,7 +26,7 @@ TUSK is an innovative legal tech solution developed to streamline the compliance
    - [**Azure Services**](#azure-services)
 6. [**RAG (Retrieval-Augmented Generation)**](#rag-retrieval-augmented-generation)
 7. [**Team**](#team)
-8. [**Contributions**](#contributions)
+8. [**Contribution**](#contribution)
 
 # Proposal
 
