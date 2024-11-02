@@ -50,6 +50,8 @@ The knowledge base built through this process serves as the foundation for docum
 
 ### RAG-Based Document Validation
 
+![image](https://github.com/user-attachments/assets/c3280513-d8d6-4d8f-97ea-9601cbf955b1)
+
 To validate external documents against the Knowledge Base, we employ a **Retrieval-Augmented Generation (RAG)** approach, ensuring a high level of accuracy and contextual understanding.
 
 1. **Document Upload for Validation**: On a separate interface, users upload the document intended for compliance validation. Similar to the Knowledge Base setup, this document is stored in the Azure Storage Account and processed through **Azure Document Intelligence** for text extraction.
@@ -138,6 +140,8 @@ To validate external documents against the Knowledge Base, we employ a **Retriev
    - Facilitates seamless integration between Flask and Azure services, streamlining data management, storage, and retrieval processes throughout the project.
 
 # Architecture
+
+![arch](https://github.com/user-attachments/assets/259e488a-f199-46b9-9c52-1d10830af1ff)
 
 # Frontend
 
