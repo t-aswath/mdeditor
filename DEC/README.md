@@ -33,7 +33,7 @@ Tusk Act 2 is a cutting-edge browser plugin designed to revolutionize how users 
    - [Knowledge Base Creation](#knowledge-base-creation)
        - [Domain-Based Indexing](#domain-based-indexing)
        - [Quantization](#quantization)
-   - [RAG-Based Q&A Chatbot](#rag-based-q-and-a-chatbot)
+   - [RAG-Based Q&A Chatbot](#rag-based-qa-chatbot)
 2. [Use Cases](#use-cases)
 3. [Technologies Used](#technologies-used)
 4. [Azure](#azure)
@@ -43,20 +43,117 @@ Tusk Act 2 is a cutting-edge browser plugin designed to revolutionize how users 
 6. [Team](#team)
 7. [Contribution](#contribution)
 
-
 # Working
 
-### Browser Plugin
-#### Manifest V3
-The Tusk Act 2 browser plugin is developed using Manifest V3, ensuring compatibility with modern browsers. This framework enhances performance, security, and privacy, making the plugin robust and efficient.
+## Browser Plugin
+### Manifest V3
+The Tusk Act 2 plugin is built using **Manifest V3**, the latest standard for developing browser extensions. This ensures:
+- **Improved Performance**: Faster and more efficient resource utilization.
+- **Enhanced Security**: Incorporates stringent security measures like isolated processes and restricted permissions.
+- **Better Privacy Controls**: Reduces the risk of unauthorized access to sensitive user data.
 
-### Knowledge Base Creation
-- **Domain-Based Indexing**: Data extracted from user-visited websites is indexed based on domains. This approach enables the plugin to build a comprehensive understanding of visited domains and their associated content, enhancing contextual responses.
-- **Quantization**: Azure’s quantization techniques, such as scalar or binary quantization, optimize the size of stored vectors, reducing memory usage while retaining critical information.
+## Knowledge Base Creation
+### Domain-Based Indexing
+- The plugin collects HTML data from websites visited by the user, ensuring user consent is obtained.
+- Data is indexed using the **domain name** as one of the key, creating a structured knowledge base.
+- This indexing approach enables:
+  - Better contextual understanding of user browsing patterns.
+  - Domain-specific data organization for precise insights.
+  
+![image](https://github.com/user-attachments/assets/3f5cc97d-dc08-4088-8f23-c777cef55ec5)
 
-### RAG-Based Q&A Chatbot
-The plugin incorporates a Retrieval-Augmented Generation (RAG) model that leverages the domain-indexed data to provide accurate and context-aware responses to user queries. This system integrates Large Language Models (LLMs) for enhanced interaction and understanding.
+### Quantization
+- Utilizes **Azure AI Search's** quantization methods, such as **Scalar Quantization**, **Binary Quantization**
+- These methods ensure the knowledge base is efficient and scalable by compressing data while preserving critical information.  
+- They reduce vector sizes to optimize memory usage.  
+- Storage requirements are minimized without compromising the quality of the data.  
 
+## RAG-Based Q&A Chatbot
+- **Retrieval-Augmented Generation (RAG)** combines:
+  - **Information Retrieval**: Extracts relevant data from the domain-indexed knowledge base.
+  - **Large Language Models (LLMs)**: Processes and synthesizes the retrieved information to generate intelligent responses.
+- The chatbot can:
+  - Answer context-specific queries based on user browsing history.
+  - Summarize and explain interconnected topics across multiple pages in a domain.
+<div align=center>
+<img src="https://github.com/user-attachments/assets/a0674c2e-04f2-4339-9964-9db60ee8f8ed" width=500 />
+</div>
+
+## Use Cases
+
+1. **Education**  
+   - Helps students and educators summarize and explain complex concepts.  
+   - Assists in consolidating information from multiple sources for better understanding.
+
+2. **Development**  
+   - Bridges technical documentation across different platforms.  
+   - Provides insights on integrating functionalities or solving specific coding challenges.
+
+3. **Research**  
+   - Organizes domain-specific data for in-depth analysis.  
+   - Enhances productivity by summarizing large datasets and providing targeted insights.
+
+4. **Productivity**  
+   - Acts as an AI assistant to improve efficiency.  
+   - Offers domain-specific guidance for tasks like report writing, content creation, or troubleshooting.
+
+# Technologies Used
+
+1. **Azure Cloud Services**  
+   - Azure provides the foundation for TUSK’s infrastructure, offering secure storage and scalable hosting. This enables seamless integration, centralized management, and efficient handling of data and AI functionalities.
+
+2. **Models**  
+   - **Text-Embedding-3-Large**  
+     - Used to generate embeddings for each document ingested into the Knowledge Base, enabling efficient and contextually aware search.  
+   - **LLAMA-7B**  
+     - LLAMA-7B is used to power the AI's natural language understanding and response generation. It enables nuanced interactions, making the chatbot contextually aware and capable of handling domain-specific queries effectively.
+
+3. **Manifest V3**  
+   - Manifest V3 is the latest specification for browser extensions, offering enhanced security, privacy, and performance. It provides the framework for TUSK’s browser plugin, ensuring compatibility with modern browsers and enabling efficient integration with the backend services.
+
+4. **LangChain**  
+   - LangChain enables the RAG chain and dynamic prompt construction, integrating document sections, contextual knowledge from the Knowledge Base, and previous validation results for nuanced compliance checks.
+
+5. **Flask (Backend)**  
+   - Flask serves as the backend framework, managing API endpoints, processing logic, and integration with Azure services for efficient handling of document processing and validation tasks.
+
+6. **Azure SDK for Python**  
+   - The Azure SDK allows seamless interaction between Flask and Azure services, enabling smooth data flow and integration across the platform.
+
+7. **Python**  
+ - Python powers the backend logic and supports integrations with LangChain, Azure SDK, and other modules for document processing and compliance analysis.
+
+8. **Microsoft OAuth 2.0**  
+   - Microsoft OAuth 2.0 is used to secure user authentication and authorization. It ensures that only authenticated users can access the plugin's features and safeguards against unauthorized usage.
+
+# Azure
+
+1. **Azure AI Search**  
+   - Serves as the vector store, housing embeddings generated for the Knowledge Base. This service enables fast, contextually relevant retrieval, allowing the RAG process to locate the most pertinent information and generate accurate responses based on the user's queries.
+
+2. **Azure OpenAI Labs**  
+   - Provides access to the embedding model **Text-Embedding-3-Large**, used to create high-quality embeddings for textual data, which are then used in the RAG process to enhance content retrieval and response generation by leveraging deep learning models.
+
+3. **Azure ML Studio**  
+   - Hosts the **LLAMA 7B** model, providing a scalable and powerful environment to run the model and generate context-aware responses based on the ingested knowledge from the user's browsing activities.
+
+4. **Azure Container Apps**  
+   - Hosts and scales the backend Flask application, handling API requests and integrating processing logic. Azure Container Apps ensures that the backend remains responsive and adaptable to fluctuating demand, providing an efficient infrastructure for handling high volumes of requests while maintaining performance.
+
+5. **Azure SDK for Python**  
+   - Facilitates seamless integration between Flask and Azure services, streamlining data management and retrieval processes throughout the project. It simplifies the connection between the backend application and Azure's various AI and search tools, ensuring smooth data flow and enabling efficient query execution.
+  
+# Architecture
+
+<img src="" alt="arch" />
+
+### Browser Plugin Architecture
+   - The browser plugin is built using Manifest V3, providing a sidebar that users can interact with. It extracts data from the websites visited by the user (with their permission) and sends it to the backend for processing. The plugin is designed to be lightweight, ensuring minimal impact on the user's browsing experience while enabling the extraction of relevant content from the pages visited.
+   - **Data Flow:** When a user visits a site, the plugin captures the HTML data and sends it to the Flask backend server. The data is parsed, processed, and sent to Azure AI Search for indexing, ensuring efficient and relevant data retrieval for the Retrieval-Augmented Generation (RAG) process.
+
+### Backend Architecture
+   - The backend of the application is built using Flask and is hosted on **Azure Container Apps**, ensuring scalability and responsiveness to fluctuating demand. The Flask application is responsible for handling API requests, processing the data, and interacting with Azure services to manage embeddings, data retrieval, and LLM responses.
+   - **Data Flow:** Once the data is received from the browser plugin, it is parsed and stored in **Azure AI Search** using custom indexing methods. This allows for fast and contextually relevant retrieval during the RAG process, where the data is passed to the **LLAMA 7B** model hosted in **Azure ML Studio**. The model generates context-aware responses, which are sent back to the plugin for display to the user.
 
 # Team
 
