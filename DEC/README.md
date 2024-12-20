@@ -145,7 +145,7 @@ The Tusk Act 2 plugin is built using **Manifest V3**, the latest standard for de
   
 # Architecture
 
-<img src="" alt="arch" />
+<img src="https://github.com/user-attachments/assets/3104b6dd-8f01-43ba-bb7c-f4a42163b2ce" alt="arch" />
 
 ### Browser Plugin Architecture
    - The browser plugin is built using Manifest V3, providing a sidebar that users can interact with. It extracts data from the websites visited by the user (with their permission) and sends it to the backend for processing. The plugin is designed to be lightweight, ensuring minimal impact on the user's browsing experience while enabling the extraction of relevant content from the pages visited.
