@@ -121,7 +121,7 @@ The Tusk Act 2 plugin is built using **Manifest V3**, the latest standard for de
    - The Azure SDK allows seamless interaction between Flask and Azure services, enabling smooth data flow and integration across the platform.
 
 7. **Python**  
- - Python powers the backend logic and supports integrations with LangChain, Azure SDK, and other modules for document processing and compliance analysis.
+   - Python powers the backend logic and supports integrations with LangChain, Azure SDK, and other modules for document processing and compliance analysis.
 
 8. **Microsoft OAuth 2.0**  
    - Microsoft OAuth 2.0 is used to secure user authentication and authorization. It ensures that only authenticated users can access the plugin's features and safeguards against unauthorized usage.
