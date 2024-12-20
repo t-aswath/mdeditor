@@ -27,24 +27,35 @@ Tusk Act 2 is a cutting-edge browser plugin designed to revolutionize how users 
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Working](#working)
+1. [Working](#working)
    - [Browser Plugin](#browser-plugin)
        - [Manifest V3](#manifest-v3)
    - [Knowledge Base Creation](#knowledge-base-creation)
        - [Domain-Based Indexing](#domain-based-indexing)
        - [Quantization](#quantization)
    - [RAG-Based Q&A Chatbot](#rag-based-q-and-a-chatbot)
-3. [Use Cases](#use-cases)
-4. [Technologies Used](#technologies-used)
-5. [Azure](#azure)
-6. [Architecture](#architecture)
+2. [Use Cases](#use-cases)
+3. [Technologies Used](#technologies-used)
+4. [Azure](#azure)
+5. [Architecture](#architecture)
    - [Browser Plugin Architecture](#browser-plugin-architecture)
    - [Backend Architecture](#backend-architecture)
-7. [Team](#team)
-8. [Contribution](#contribution)
+6. [Team](#team)
+7. [Contribution](#contribution)
 
 
+# Working
+
+### Browser Plugin
+#### Manifest V3
+The Tusk Act 2 browser plugin is developed using Manifest V3, ensuring compatibility with modern browsers. This framework enhances performance, security, and privacy, making the plugin robust and efficient.
+
+### Knowledge Base Creation
+- **Domain-Based Indexing**: Data extracted from user-visited websites is indexed based on domains. This approach enables the plugin to build a comprehensive understanding of visited domains and their associated content, enhancing contextual responses.
+- **Quantization**: Azure’s quantization techniques, such as scalar or binary quantization, optimize the size of stored vectors, reducing memory usage while retaining critical information.
+
+### RAG-Based Q&A Chatbot
+The plugin incorporates a Retrieval-Augmented Generation (RAG) model that leverages the domain-indexed data to provide accurate and context-aware responses to user queries. This system integrates Large Language Models (LLMs) for enhanced interaction and understanding.
 
 
 # Team
