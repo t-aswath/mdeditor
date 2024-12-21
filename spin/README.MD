@@ -8,8 +8,8 @@
   <img src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white">
   <img src="https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white">
 
-  <h1>TUSK: Trusted Utility for Statutory Knowledge ACT II </h1>
- <a href="https://1drv.ms/p/c/b7bb6097c40f3e7e/Eb5NlOnzfyBAjh_dxBXCbtMBVrGIYLxx8GSMBpwuhnSvtQ?e=qDWxfv"> <img src="https://github.com/user-attachments/assets/73d36b52-0529-40b4-b008-012eeca5df05" width=30 />
+  <h1>SPIN : Smart Process Innovation Network </h1>
+ <a href="https://1drv.ms/p/c/b7bb6097c40f3e7e/EWqfZUKxrBtOtUfp1h9y27QB7S9cBNXIB6XsWIZMVoo0Iw?e=z0TGvh"> <img src="https://github.com/user-attachments/assets/73d36b52-0529-40b4-b008-012eeca5df05" width=30 />
  </a>
   &nbsp;&nbsp;&nbsp;
 <a href="">
@@ -17,7 +17,7 @@
 </a>
   &nbsp;&nbsp;&nbsp;
 
-<a href="https://tusk.bitspace.org">
+<a href="https://spin.bitspace.org">
        <img src="https://github.com/user-attachments/assets/2676cd53-a2f7-4c37-abc4-1127f00fba86" width=30 />
 </a>
 </div>
